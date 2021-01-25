@@ -8,6 +8,7 @@ class Subscription {
         this.price = price
         this.paymentDate = paymentDate
         this.plan = plan
+        this.categoryName = Category.name
 
         this.main = document.createElement('div')
         this.main.id = `subs-${this.id}`
@@ -31,7 +32,9 @@ class Subscription {
         <p>Name: <span>${this.name}</span></p>
         <p>Price: <span>$${this.price}</span></p>
         <p>Re-occuring Date: <span>${this.paymentDate}</span></p>
-        <p>Plan: <span>${this.plan}</span></p>`
+        <p>Plan: <span>${this.plan}</span></p>
+        <p>Category: <span>${this.categoryName}</span></p>
+        `
     }
 
     allCategories(){
@@ -39,7 +42,7 @@ class Subscription {
     }
 
     renderCategories(){
-        this.categories.innerHTML = this.allCategories().map(category => category.renderLi()).join("")
+        this.categoriesDiv.innerHTML = this.allCategories().map(category => category.renderLi()).join("")
     }
 
     renderEditSubscriptionForm = () => {
@@ -59,6 +62,9 @@ class Subscription {
         <br/>
         <label>Plan:</label>
         <input type="text" name="plan" value="${this.plan}">
+        <br/>
+        <label>Category:</label>
+        <input type="text" name="category" value"${this.categoryName}">
         <br/>
         <input id="edit-subscription" type="submit" value="Edit">
         `
