@@ -34,5 +34,13 @@ class Subscription {
         <p>Plan: <span>${this.plan}</span></p>`
     }
 
+    allCategories(){
+        return Category.all.filter(category => category.subscriptionId == this.id)
+    }
+
+    renderCategories(){
+        this.categories.innerHTML = this.allCategories().map(category => category.renderLi()).join("")
+    }
+
     
 }
