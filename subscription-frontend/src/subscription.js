@@ -13,11 +13,11 @@ class Subscription {
         this.main.id = `subs-${this.id}`
         this.details = document.createElement('div')
         this.details.id = `subs-${this.id}-details`
-        this.categories = document.createElement('div')
-        this.categories.id = `subs-${this.id}-categories`
+        this.categoriesDiv = document.createElement('div')
+        this.categoriesDiv.id = `subs-${this.id}-categories`
         this.editButton = document.createElement('button')
         this.editButton.innerText = "Edit Subscription"
-        this.main.append(this.details, this.categories, this.editButton)
+        this.main.append(this.details, this.categoriesDiv, this.editButton)
 
         this.form = document.createElement('form')
 

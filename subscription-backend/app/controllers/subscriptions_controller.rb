@@ -1,7 +1,7 @@
 class SubscriptionsController < ApplicationController
     def index
         subscriptions = Subscription.all
-        render({json: subscriptions, include: {categries: {except: [:created_at, :updated_at]}}, except: [:created_at, :updated_at]})
+        render({json: subscriptions, include: {categories: {except: [:created_at, :updated_at]}}, except: [:created_at, :updated_at]})
     end
 
     def create
