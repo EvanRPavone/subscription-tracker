@@ -25,4 +25,14 @@ class Subscription {
         this.form.addEventListener('submit', this.submitEditSubscriptionForm)
         Subscription.all.push(this)
     }
+
+    renderDetails() {
+        this.details.innerHTML = `
+        <p>Name: <span>${this.name}</span></p>
+        <p>Price: <span>$${this.price}</span></p>
+        <p>Re-occuring Date: <span>${this.paymentDate}</span></p>
+        <p>Plan: <span>${this.plan}</span></p>`
+    }
+
+    
 }
