@@ -42,5 +42,25 @@ class Subscription {
         this.categories.innerHTML = this.allCategories().map(category => category.renderLi()).join("")
     }
 
-    
+    renderEditSubscriptionForm = () => {
+        this.editButton.disabled = true
+        console.log(this);
+        this.details.innerHTML = ' '
+        this.details.appendChild(this.form)
+        this.form.innerHTML = `
+        <label>Name:</label>
+        <input type="text" name="name" value="${this.name}">
+        <br/>
+        <label>Price:</label>
+        <input type="text" name="price" value="${this.price}">
+        <br/>
+        <label>Re-Occuring Date:</label>
+        <input type="date" name="paymentDate" value="${this.paymentDate}">
+        <br/>
+        <label>Plan:</label>
+        <input type="text" name="plan" value="${this.plan}">
+        <br/>
+        <input id="edit-subscription" type="submit" value="Edit">
+        `
+    }
 }
