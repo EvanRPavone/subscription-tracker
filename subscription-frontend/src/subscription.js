@@ -74,5 +74,11 @@ class Subscription {
         SubscriptionAdapter.editSubscription(this)
     }
 
-    
+    static renderAllSubscriptions(){
+        Subscription.all.forEach((subscription) => {
+            subscription.renderDetails()
+            subscription.renderCategories()
+            Subscription.subscriptionContainer.appendChild(subscription.main)
+        })
+    }
 }
