@@ -1,0 +1,3 @@
+CategoryAdapter.fetchAndMakeCategories()
+.then(SubscriptionAdapter.fetchAndMakeSubscriptions)
+.then(Subscription.renderAllSubscriptions)
