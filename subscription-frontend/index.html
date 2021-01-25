@@ -7,31 +7,21 @@
 </head>
 <body>
     <h1>Subscriptions Tracker</h1>
-    <div id="sub-form-container">
-        <p>Add a Subscription:</p>
-        <form id="sub-form">
-            <label>Name:</label>
-            <input type="text" name="name">
-            <br/>
-            <label>Price:</label>
-            <input type="text" name="price">
-            <br/>
-            <label>Re-Occuring Payment Date:</label>
-            <input type="date" name="paymentDate">
-            <br/>
-            <label>Payment Plan:</label>
-            <input type="text" name="plan">
-            <br/>
-            <label>Category:</label>
-            <input type="text" name="category">
-            <br/>
-            <input type="submit" value="Add Subscription">
-        </form>
-    </div>
-    <br/>
     <div id="subscription-container">
-
     </div>
+    <br>
+    <h3>Add A New Subscription:</h3>
+    <form id="new-subscription-form">
+      <input id="new-subscription-name" type="text" value="" placeholder="Enter Subscription name">
+      <br>
+      <input id="new-subscription-price" type="text" value="" placeholder="Enter the price of the subscription">
+      <br>
+      <input id="new-subscription-date" type="date" value="" placeholder="Enter the date for when it renews">
+      <br>
+      <input id="new-subscription-plan" type="text" value="" placeholder="Monthly? Every 3 Months? Annually?">
+      <br>
+      <input type="submit" value="Add a New Subscription">
+    </form>
 </body>
 <!-- <script type="text/javascript" src="src/subscriptionAdapter.js"></script>
 <script type="text/javascript" src="src/categoryAdapter.js"></script>
