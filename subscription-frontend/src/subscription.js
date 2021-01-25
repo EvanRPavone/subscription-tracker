@@ -63,4 +63,16 @@ class Subscription {
         <input id="edit-subscription" type="submit" value="Edit">
         `
     }
+
+    submitEditSubscriptionForm = (e) => {
+        e.preventDefault()
+        this.form.querySelectorAll('input').forEach(function(input){
+            input.name !== "submit" && (this[`${input.name}`] = input.value)
+        }, this)
+        this.editButton.disabled = false
+        this.renderDetails()
+        SubscriptionAdapter.editSubscription(this)
+    }
+
+    
 }
